@@ -2,7 +2,7 @@
 pkgname=lnclt-base
 pkgver=0.0.1
 pkgrel=1
-pkgdesc=Must-have packages for every system
+pkgdesc="Bare minimum packages, mostly terminal/shell related."
 arch=('any')
 url="https://github.com/lnc-lt/arch-lnclt-pkgbuilds"
 license=('MIT')
@@ -10,4 +10,6 @@ depedends=(
 	'vim'
 	'tmux'
 	'ssh'
+	'zsh'
+	'git'
 )

@@ -1,8 +1,5 @@
 FROM archlinux/base
 
-# Set up volumes
-VOLUME ./repo /repo
-COPY ./pkg /pkg
 
 # Apply custom config for pacman and makepkg
 COPY ./pacman.conf /etc/pacman.conf
@@ -30,6 +27,10 @@ RUN gpg --recv-key 6BC26A17B9B7018A \
 # Build packages and add to repository file
 WORKDIR "/"
 COPY ./build_packages.sh /build_packages.sh
+
+# Set up volumes
+VOLUME ./repo /repo
+VOLUME ./pkg /pkg
 
 # Execture build_packages command
 CMD bash build_packages.sh
