@@ -12,7 +12,8 @@ RUN pacman -Syu --noconfirm base-devel wget sudo
 RUN useradd builduser -m \
  && passwd -d builduser \
  && printf "builduser ALL=(ALL) ALL\n" | tee -a /etc/sudoers \
- && chown -R builduser {/repo,/pkg,/tmp}
+ && chown -R builduser /tmp
+
 # Switch from root to builduser
 USER builduser
 
