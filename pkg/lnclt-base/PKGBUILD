@@ -6,7 +6,7 @@ pkgdesc="Bare minimum packages, mostly terminal/shell related."
 arch=('any')
 url="https://github.com/lnc-lt/arch-lnclt-pkgbuilds"
 license=('MIT')
-depedends=(
+depends=(
 	'vim'
 	'tmux'
 	'ssh'
