@@ -24,7 +24,7 @@ pkgdesc=$pkgdesc
 arch=('any')
 url="https://github.com/lnc-lt/arch-lnclt-pkgbuilds"
 license=('MIT')
-depedends=(
+depends=(
 EOF
 
 for dependency in $depends
